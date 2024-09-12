@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <title>hometask5</title>
 </head>
 
@@ -81,8 +82,24 @@
                     </ul>
                 </nav>
                 <div class="slider">
-                    <div>
-                        <img src="./img/slider_banner.jpg" alt="IMAGE">
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide"><img src="./img/slider_banner.jpg" alt="IMAGE"></div>
+                            <div class="swiper-slide"><img src="./img/slider_banner.jpg" alt="IMAGE"></div>
+                            <div class="swiper-slide"><img src="./img/slider_banner.jpg" alt="IMAGE"></div>
+                            ...
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+
+                        <!-- If we need scrollbar -->
+                        <div class="swiper-scrollbar"></div>
                     </div>
                     <div class="hot_discount">
                         <div class="hot_discount_discount #F0F0F4">
@@ -476,6 +493,25 @@
             </div>
         </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+
+    </script>
 </body>
 
 </html>

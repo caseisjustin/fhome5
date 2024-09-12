@@ -166,6 +166,16 @@ main {
     justify-content: space-between;
 }
 
+.slider .swiper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img{
+    width: 100%;
+}
+
 .slider .hot_discount {
     display: flex;
     flex-direction: column;
